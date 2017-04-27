@@ -1,2 +1,5 @@
-def add_gigasecond():
-    pass
+from datetime import datetime
+from datetime import timedelta
+
+def add_gigasecond(date):
+    return date + timedelta(seconds=1000000000)
