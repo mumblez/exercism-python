@@ -1,2 +1,8 @@
 __pycache__
 .pyc
+/.env
+/.Python
+/bin/
+/include/
+/lib/
+/pip-selfcheck.json
