@@ -64,3 +64,20 @@ def encode(string):
 #         else:
 #             encoded_str += "{}{}".format(len(chars),chars[0])
 #     return encoded_str
+
+# http://exercism.io/submissions/a4e446508adc4f01bd3a56c773767947
+# clever use of 'or' when casting int, if fail or 0 can use alternative!!!
+# import re
+#
+# def decode(s):
+#     out = ''
+#     for c in re.findall('([1-9]*)(.)',s):
+#         out += c[1] * int(c[0] or 1)
+#     return out
+#
+# def encode(s):
+#     out = ''
+#     for c in re.findall('((?P<ltr>.)(?P=ltr)*)',s):
+#         l = len(c[0])
+#         out += '{}{}'.format([l,''][l==1],c[1])
+#     return out
