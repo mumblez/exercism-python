@@ -1,12 +1,6 @@
 class Allergies(object):
     def __init__(self, allergyMask):
-        self.allergies = {v: 1<<k for k, v in enumerate(['eggs', 'peanuts', 'shellfish', 'strawberries', 'tomatoes', 'chocolate', 'pollen', 'cats'])}
-        self.allergyMask = allergyMask
+        self.lst = [v for k,v in enumerate(['eggs', 'peanuts', 'shellfish', 'strawberries', 'tomatoes', 'chocolate', 'pollen', 'cats']) if 1<<k & allergyMask]
 
     def is_allergic_to(self, allergy):
-        return self.allergies[allergy] & self.allergyMask > 0
-
-    @property
-    def lst(self):
-        return [a for a in self.allergies if self.allergies[a] & self.allergyMask > 0]
-
+        return allergy in self.lst
