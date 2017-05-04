@@ -2,9 +2,9 @@ def abbreviate(sentence):
     words = sentence.replace('-', ' ').split()
     acm = ''
     for word in words:
-        for i in range(len(word)):
-            if i == 0:
-                acm += word[i].upper()
-            elif word[i].isupper() and word[i-1].islower():
-                acm += word[i].upper()
-    return acm
+        for idx, letter in enumerate(list(word)):
+            if idx == 0:
+                acm += letter
+            elif letter.isupper() and word[idx-1].islower():
+                acm += letter
+    return acm.upper()
